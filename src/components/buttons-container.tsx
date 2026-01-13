@@ -1,17 +1,12 @@
-import type { FC } from "react";
+import { incrementCount, decrementCount } from '../store/use-counter-store'
 
-interface IProps {
-  onIncrement: () => void;
-  onDecrement: () => void;
-}
-
-const ButtonsContainer: FC<IProps> = ({ onIncrement, onDecrement }) => {
+const ButtonsContainer = () => {
   return (
     <div className="card">
-      <button onClick={onIncrement}>Увеличить число</button>
-      <button onClick={onDecrement}>Уменьшить число</button>
+      <button onClick={incrementCount()}>Увеличить число</button>
+      <button onClick={decrementCount()}>Уменьшить число</button>
     </div>
-  );
-};
+  )
+}
 
-export default ButtonsContainer;
+export default ButtonsContainer

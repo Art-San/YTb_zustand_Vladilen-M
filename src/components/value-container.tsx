@@ -1,17 +1,12 @@
-import type { FC } from "react";
-import Value from "./value";
+import Value from './value'
 
-interface IProps {
-  count: number;
-}
-
-const ValueContainer: FC<IProps> = ({ count }) => {
+const ValueContainer = () => {
   return (
     <div>
       <h4>Число:</h4>
-      <Value count={count} />
+      <Value />
     </div>
-  );
-};
+  )
+}
 
-export default ValueContainer;
+export default ValueContainer

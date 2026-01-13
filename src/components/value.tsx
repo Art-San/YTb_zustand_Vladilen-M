@@ -1,11 +1,8 @@
-import type { FC } from "react";
+import { useCount } from '../store/use-counter-store'
 
-interface IProps {
-  count: number;
+const Value = () => {
+  const count = useCount()
+  return <h2>{count}</h2>
 }
 
-const Value: FC<IProps> = ({ count }) => {
-  return <h2>{count}</h2>;
-};
-
-export default Value;
+export default Value
